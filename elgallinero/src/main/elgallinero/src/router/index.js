@@ -9,7 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-
+    {
+      path: '/elpodcast',
+      name: 'elpodcast',
+      // component: HomeView
+    },
   ]
 })
 
