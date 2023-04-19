@@ -5,12 +5,10 @@
     box-sizing: border-box;
 
     body {
-        background: $background-component;
+        // background: $background-component;
         font-family: $font-text;
         min-height: 100vh;
         
-        h1, h3 {
-            color: $text-red;
-        }
+    
     }
 }

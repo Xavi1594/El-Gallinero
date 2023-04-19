@@ -47,6 +47,11 @@ import { RouterLink } from "vue-router";
           <li class="nav-item">
             <RouterLink class="nav-link" to="#">Historia culé</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" to="#"
+              >Login</RouterLink
+            >
+          </li>
         
         </ul>
       </div>
