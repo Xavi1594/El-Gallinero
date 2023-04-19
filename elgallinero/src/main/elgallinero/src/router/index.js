@@ -34,9 +34,9 @@ const router = createRouter({
 
     },
     {
-      path: '/humorgallino',
-      name: 'humorgallino',
-      component: () => import("../views/HumorGallinoView.vue"),
+      path: '/articulos',
+      name: 'articulos',
+      component: () => import("../views/ArticulosView.vue"),
 
     },
     {

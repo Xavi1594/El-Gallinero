@@ -40,8 +40,8 @@ import { RouterLink } from "vue-router";
             >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/humorgallino"
-              >Humor Gallino</RouterLink
+            <RouterLink class="nav-link" to="/articulos"
+              >Artículos</RouterLink
             >
           </li>
           <li class="nav-item">

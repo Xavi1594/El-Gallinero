@@ -4,10 +4,11 @@ import footerComponent from '../components/footerComponent.vue';
 </script>
 
 <template>
+  <navbarComponent />
 
     
   <main>
-  <navbarComponent />
+
   
 
    <h1>Bienvenido al Gallinero</h1>

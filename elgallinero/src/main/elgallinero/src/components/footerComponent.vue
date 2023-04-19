@@ -86,6 +86,7 @@
   color: $background-component;
   padding: 2rem;
  margin-bottom: 0;
+ 
 
   &__container-log {
     img {
