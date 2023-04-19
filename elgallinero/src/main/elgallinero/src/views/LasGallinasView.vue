@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import navbarComponent from '../components/navbarComponent.vue';
+</script>
 <template>
-    <h5>ññañsña</h5>
+    <navbarComponent />
+
 </template>
