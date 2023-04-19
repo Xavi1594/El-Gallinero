@@ -30,25 +30,25 @@ import { RouterLink } from "vue-router";
             >
           </li>
           <li class="nav-item">
-            <RouterLink to="#" class="nav-link"
+            <RouterLink to="/mejoreshilos" class="nav-link"
               >Mejores Hilos</RouterLink
             >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="#"
+            <RouterLink class="nav-link" to="/lasgallinas"
               >Las gallinas</RouterLink
             >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="#"
+            <RouterLink class="nav-link" to="/humorgallino"
               >Humor Gallino</RouterLink
             >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="#">Historia culé</RouterLink>
+            <RouterLink class="nav-link" to="/historiacule">Historia culé</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="#"
+            <RouterLink class="nav-link" to="/login"
               >Login</RouterLink
             >
           </li>

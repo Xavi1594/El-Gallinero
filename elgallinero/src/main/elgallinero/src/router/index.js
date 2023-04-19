@@ -12,7 +12,38 @@ const router = createRouter({
     {
       path: '/elpodcast',
       name: 'elpodcast',
-      // component: HomeView
+    component: () => import("../views/PodcastView.vue")
+
+    },
+    {
+      path: '/historiacule',
+      name: 'historiacule',
+      component: () => import("../views/HistoriaCuleView.vue"),
+
+    },
+    {
+      path: '/mejoreshilos',
+      name: 'mejoreshilos',
+      component: () => import("../views/MejoresHilosView.vue"),
+
+    },
+    {
+      path: '/lasgallinas',
+      name: 'lasgallinas',
+      component: () => import("../views/LasGallinasView.vue"),
+
+    },
+    {
+      path: '/humorgallino',
+      name: 'humorgallino',
+      component: () => import("../views/HumorGallinoView.vue"),
+
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import("../views/LoginView.vue"),
+
     },
   ]
 })
