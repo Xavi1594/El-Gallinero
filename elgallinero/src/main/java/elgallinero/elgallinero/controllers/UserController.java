@@ -48,7 +48,7 @@ public ResponseEntity<?> store(@RequestBody User newUser) {
 try {
     return ResponseEntity.ok(service.save(newUser));
 } catch (Exception e) {
-    return ResponseEntity.status(500).body("error")
+    return ResponseEntity.status(500).body("error");
 
 }
 }
