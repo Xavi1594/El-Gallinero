@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "articles")
 public class Article {
-    
+
     public Article() {
     }
 
@@ -24,7 +24,7 @@ public class Article {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-private User user;
+    private User user;
 
     public Long getId() {
         return id;
@@ -56,5 +56,5 @@ private User user;
 
     public void setUser(User user) {
         this.user = user;
-    } 
+    }
 }
