@@ -36,6 +36,7 @@ const page = (position) => {
   start.value = position;
 };
 </script>
+
 <template>
   <main>
     <div class="mt-5">
@@ -51,7 +52,6 @@ const page = (position) => {
     <footerComponent />
   </main>
 </template>
-
 
 <style lang="scss" scoped>
 /* mt-5 {
