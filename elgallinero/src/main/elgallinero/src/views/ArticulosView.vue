@@ -1,6 +1,5 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
-    <div>
-        <h6>majo</h6>
-    </div>
+  <h3>hola</h3>
 </template>
