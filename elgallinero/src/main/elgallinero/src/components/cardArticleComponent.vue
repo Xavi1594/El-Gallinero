@@ -2,27 +2,30 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-  item: { type: Object }
+  item: { type: Object },
+  defaultImage: { type: String, default: 'https://www.fcbarcelona.com/photo-resources/2020/04/27/57da04df-c7d0-428f-b95c-79f1d2b56941/5.jpg?width=1200&height=750' }
 });
 
-</script>
 
+</script>
 <template>
-  <div class="card">
-    <div class="row g-0">
-      <div class="col-md-6" v-if="item && item.imageArticle">
-        <img :src="item.imageArticle">
-      </div>
-      <div class="col-md-6">
-        <div class="card-body">
-          <h5 class="card-title">{{ item && item.title }}</h5>
-          <pre class="card-text">{{ item && item.content }}</pre>
+    <div class="card">
+      <div class="row g-0">
+        <div class="col-md-6" v-if="item && item.imageArticle">
+          <img :src="item.imageArticle">
+        </div>
+        <div class="col-md-6" v-else>
+          <img src="https://www.fcbarcelona.com/photo-resources/2020/04/27/57da04df-c7d0-428f-b95c-79f1d2b56941/5.jpg?width=1200&height=750">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">{{ item && item.title }}</h5>
+            <pre class="card-text">{{ item && item.content }}</pre>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</template>
-
+  </template>
 <style scoped lang="scss">
 @import "../.././src/assets/sass/variables";
 @import "../.././src/assets/sass/global.scss";
