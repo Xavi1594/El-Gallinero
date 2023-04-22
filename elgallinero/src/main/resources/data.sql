@@ -1,7 +1,7 @@
 INSERT INTO users (username) VALUES
-  ('JohnDoe'),
-  ('JaneDoe'),
-  ('BobSmith');
+  ('Xavi1594'),
+  ('Slephard'),
+  ('Mikel');
 
 
 INSERT INTO articles (title, content, user_id) VALUES
