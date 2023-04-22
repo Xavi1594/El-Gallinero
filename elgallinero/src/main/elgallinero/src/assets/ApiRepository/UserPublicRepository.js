@@ -12,5 +12,7 @@ export default class UserPublicRepository {
         usersList.push(json);
 
         return json;
+        
     }
+
 }

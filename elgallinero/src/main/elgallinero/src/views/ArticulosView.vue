@@ -1,5 +1,7 @@
 <script setup>
+import navbarComponent from "../components/navbarComponent.vue";
+
 </script>
 <template>
-  <h3>hola</h3>
+<navbarComponent />
 </template>
