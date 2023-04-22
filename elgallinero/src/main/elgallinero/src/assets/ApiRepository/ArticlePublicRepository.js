@@ -6,7 +6,7 @@ export default class ArticlesPublicRepository{
     async getAll() {
         const response = await fetch(this.url);
         const json = await response.json();
-
+    
         let articleList = [];
 
         articleList.push(json);

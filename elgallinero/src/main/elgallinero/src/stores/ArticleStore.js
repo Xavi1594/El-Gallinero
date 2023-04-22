@@ -1,7 +1,15 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export const articleStore = defineStore ('articleStore', () => {
-	const articleObject = ref([]);
-	return articleObject
-})
+export const ArticleStore = defineStore('ArticleStore', () => {
+  const articleObject = ref([]);
+
+  const addArticle = (article) => {
+    articleObject.value.push(article);
+  };
+
+  return {
+    articleObject,
+    addArticle,
+  };
+});
