@@ -3,10 +3,10 @@ import navbarComponent from "../components/navbarComponent.vue";
 import cardArticleComponent from "../components/cardArticleComponent.vue";
 import paginationComponent from "../components/paginationComponent.vue";
 import footerComponent from "../components/footerComponent.vue";
-import GlobalApiRepository from ".././assets/ApiRepository/GlobalApiRepository"
+import GlobalApiRepository from "../assets/ApiRepository/GlobalApiRepository";
 import { onBeforeMount, ref, computed } from "vue";
 
-const repository = new GlobalApiRepository("articles");
+const repository = new GlobalApiRepository("article"); // corregido aquí para que coincida con la clase en el archivo ApiRepository
 const api = repository.chooseApi();
 
 const articlesCardxPage = 8;
@@ -18,7 +18,7 @@ onBeforeMount(async () => {
   articlesList.value = await api.getAll();
 });
 
-const articlesToShow = computed( () => {
+const articlesToShow = computed(() => {
   return articlesList.value.slice(start.value, end.value);
 });
 
@@ -33,31 +33,25 @@ const prev = () => {
 const page = (position) => {
   start.value = position;
 };
-
-
-
-
-
 </script>
+
 <template>
-    <main>
+  <main>
     <div class="mt-5">
-<navbarComponent />
-<div class="container" id="headerH3">
+      <navbarComponent />
+      <div class="container" id="headerH3">
         <h3>Últimos artículos</h3>
       </div>
       <div id="container-Articles">
         <cardArticleComponent v-for="article in articlesToShow" :key="article.id" :article="article" />
       </div>
-      <Pagination :pageSize="articlesCardxPage" :start="start" :end="end" :maxLength="articlesList.length" @change="page" @prev="prev" @next="next" />
-
-
-</div>
-<paginationComponent />
-</main>
-<footerComponent />
+      <paginationComponent :pageSize="articlesCardxPage" :start="start" :end="end" :maxLength="articlesList.length" @change="page" @prev="prev" @next="next" />
+    </div>
+    <footerComponent />
+  </main>
 </template>
-<style lang=" scss" scoped>
+
+<style lang="scss" scoped>
 /* mt-5 {
   display: flex;
   justify-content: center;
@@ -80,6 +74,4 @@ h3 {
 #color-pag  {
   color: black;
 } */
-
-
 </style>
