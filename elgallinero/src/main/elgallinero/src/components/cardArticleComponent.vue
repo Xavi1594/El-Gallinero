@@ -1,23 +1,25 @@
 <script setup>
 const props = defineProps({
-  item: { type: Object },
+  item: { type: Object }
 });
+
 </script>
 <template>
     <div class="card">
-        <div class="row g-0">
-            <div class="col-md-6" v-if="item.imageArticle">
-                <img src="../assets/img/gallinero_logo-removebg-preview.png">
-            </div>
-            <div class="col-md-6">
-                <div class="card-body">
-                    <h5 class="card-title">{{ item.name}}</h5>
-                    <pre class="card-text">{{ item.description }}</pre>
-                </div>
-            </div>
+      <div class="row g-0">
+        <div class="col-md-6" v-if="item.imageArticle">
+          <img :src="item.imageArticle">
         </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name}}</h5>
+            <pre class="card-text">{{ item.description }}</pre>
+          </div>
+        </div>
+      </div>
     </div>
-</template>
+  </template>
+  
 
 <style scoped lang="scss">
 @import "../../src/assets/sass/variables";
