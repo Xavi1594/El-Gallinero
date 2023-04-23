@@ -11,7 +11,7 @@ import {ArticleStore} from "../stores/ArticleStore";
 const repository = new GlobalApiRepository("article"); 
 const api = repository.chooseApi();
 
-const articlesCardxPage = 8;
+const articlesCardxPage = 4;
 const start = ref(0);
 const end = computed(() => Math.min(start.value + articlesCardxPage, articlesList.value.length));
 
