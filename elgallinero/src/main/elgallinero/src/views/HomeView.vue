@@ -1,7 +1,9 @@
 <script setup>
 import navbarComponent from '../components/navbarComponent.vue';
 import footerComponent from '../components/footerComponent.vue';
+import { RouterLink } from 'vue-router';
 </script>
+
 <template>
   <div>
     <navbarComponent />
@@ -11,8 +13,9 @@ import footerComponent from '../components/footerComponent.vue';
         <h1>Bienvenido al Gallinero</h1>
         <h4 class="subtitle">Barça, humor y mucho análisis. En ese orden</h4>
       </div>
-      <img src="../assets/img/">
-      <button class="btn btn-danger">Entrar</button>
+      <router-link to="/articulos">
+        <button class="btn ">Entrar</button>
+      </router-link>
     </main>
 
     <footerComponent />
@@ -70,5 +73,21 @@ import footerComponent from '../components/footerComponent.vue';
   100% {
     transform: skewY(0deg);
   }
+}
+
+button.btn {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: $text-red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
 }
 </style>
