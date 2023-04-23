@@ -16,9 +16,9 @@ const router = createRouter({
 
     },
     {
-      path: '/historiacule',
-      name: 'historiacule',
-      component: () => import("../views/HistoriaCuleView.vue"),
+      path: '/editararticulos',
+      name: 'editararticulos',
+      component: () => import("../views/EditarArticulosView.vue"),
 
     },
     {

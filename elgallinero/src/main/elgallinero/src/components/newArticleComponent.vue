@@ -67,7 +67,7 @@ async function save() {
 
             <div class="col-12 col-md-8">
                 <label for="content" class="form-label">Contenido</label>
-                <textarea id="textarea-content" v-model="articlesAdd.content" placeholder="Escribe aquí" rows="4" cols="50"></textarea>
+                <textarea id="textarea-content" v-model="articlesAdd.content" placeholder="Escribe aquí" rows="6" cols="350"></textarea>
             </div>
 
             <div class="d-flex w-80 mb-3 mt-3">
@@ -79,3 +79,39 @@ async function save() {
         </div>
     </form>
 </template>
+<style lang="scss" scoped>
+@import ".././assets/sass/variables";
+
+.container {
+  width: 80%;
+  max-width: none;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: $background-component;
+  height: 100%;
+}
+
+.form-control {
+  width: 100%;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  background-color: #ffffff;
+}
+.btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-10 {
+    width: 10%;
+  }
+}
+
+
+</style>

@@ -30,8 +30,8 @@ import { RouterLink } from "vue-router";
             >
           </li>
           <li class="nav-item">
-            <RouterLink to="/mejoreshilos" class="nav-link"
-              >Mejores Hilos</RouterLink
+            <RouterLink to="/creararticulos" class="nav-link"
+              >Crear artículo</RouterLink
             >
           </li>
           <li class="nav-item">
@@ -45,7 +45,7 @@ import { RouterLink } from "vue-router";
             >
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/historiacule">Historia culé</RouterLink>
+            <RouterLink class="nav-link" to="/editararticulos">Editar artículos</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/login"
