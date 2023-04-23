@@ -42,7 +42,7 @@ const page = (position) => {
     <div class="mt-5">
       <navbarComponent />
       <div class="container" id="headerH3">
-        <h3>Últimos artículos</h3>
+        <h3 class="text-center mt-5 mb-3">Últimos artículos</h3>
       </div>
       <div id="container-Articles" v-if="articlesToShow.length > 0">
         <cardArticleComponent v-for="article in articlesToShow" :key="article.id" :item="article" />

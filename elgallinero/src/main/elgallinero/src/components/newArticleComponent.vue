@@ -1,5 +1,5 @@
 <script setup>
-import { ArticleStore } from '../../.././src/stores/ArticleStore';
+import {ArticleStore} from ".././stores/ArticleStore";
 
 const articleToAdd = articles();
 
