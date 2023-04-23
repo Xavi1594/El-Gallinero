@@ -19,6 +19,7 @@ const props = defineProps({
         </div>
         <div class="col-md-6">
           <div class="card-body">
+            <span>{{ item.dateevent }}</span>
             <h5 class="card-title">{{ item && item.title }}</h5>
             <pre class="card-text">{{ item && item.content }}</pre>
           </div>
