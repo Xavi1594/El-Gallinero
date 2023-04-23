@@ -2,14 +2,22 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const ArticleStore = defineStore('ArticleStore', () => {
-  const articleObject = ref([]);
+  const articles = ref([]);
 
   const addArticle = (article) => {
-    articleObject.value.push(article);
+    articles.value.push(article);
+  };
+
+  const updateArticle = (updatedArticle) => {
+    const index = articles.value.findIndex(article => article.id === updatedArticle.id);
+    if (index !== -1) {
+      articles.value[index] = updatedArticle;
+    }
   };
 
   return {
-    articleObject,
+    articles,
     addArticle,
+    updateArticle,
   };
 });

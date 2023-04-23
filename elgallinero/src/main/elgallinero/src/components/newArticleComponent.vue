@@ -67,7 +67,7 @@ async function save() {
 
             <div class="col-12 col-md-8">
                 <label for="content" class="form-label">Contenido</label>
-                <textarea id="textarea-content" v-model="articlesAdd.content" placeholder="Escribe aquí" rows="6" cols="350"></textarea>
+                <textarea id="textarea-content" v-model="articlesAdd.content" placeholder="Escribe aquí" rows="30" cols="150"></textarea>
             </div>
 
             <div class="d-flex w-80 mb-3 mt-3">

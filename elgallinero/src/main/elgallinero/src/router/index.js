@@ -16,15 +16,17 @@ const router = createRouter({
 
     },
     {
-      path: '/editararticulos',
+      path: '/editararticulos/:id',
       name: 'editararticulos',
+      props: true,
       component: () => import("../views/EditarArticulosView.vue"),
-
     },
+    
     {
-      path: '/mejoreshilos',
-      name: 'mejoreshilos',
-      component: () => import("../views/MejoresHilosView.vue"),
+      path: '/adminarticles',
+      name: 'adminarticles',
+      props: true,
+      component: () => import("../views/AdminArticlesView.vue"),
 
     },
     {
@@ -53,6 +55,7 @@ const router = createRouter({
       component: () => import("../views/LoginView.vue"),
 
     },
+
   ]
 })
 

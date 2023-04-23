@@ -1,21 +1,20 @@
 import ArticlePublicRepository from "./ArticlePublicRepository";
 import UserPublicRepository from "./UserPublicRepository";
 
-export default class GlobalApiRepository{
+export default class GlobalApiRepository {
+  api;
 
-    api;
+  constructor(apiToCharge) {
+    this.api = apiToCharge;
+  }
 
-    constructor(apiToCharge) {
-        this.api = apiToCharge;
-        this.chooseApi();
+  chooseApi() {
+    if (this.api === "user") {
+      return new UserPublicRepository();
     }
-
-    chooseApi() {
-        if(this.api === "user") {
-            return new UserPublicRepository;
-        }
-        if(this.api === "article") {
-            return new ArticlePublicRepository;
-        }
+    if (this.api === "article") {
+      return new ArticlePublicRepository();
     }
+    throw new Error(`API '${this.api}' not supported`);
+  }
 }
