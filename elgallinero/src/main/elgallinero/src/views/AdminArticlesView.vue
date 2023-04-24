@@ -67,119 +67,80 @@ const page = (position) => {
 
 <template>
   <navbarComponent />
-  <main>
-    <div class="card mb-3" v-for="article in articlesToShow" :key="article.id" :member="article">
-
-      <div class="gap-3 col-md-9">
-        <div class="text-name">
-          <p class="font-name">
-            <b>{{ article.title }}</b>
-          </p>
-          <p class="font-italic">{{ article.content }}</p>
-         <img src="../assets/img/pedri-removebg-preview.png" alt="">
-        </div>
-        <div class="gap-3 col-md-9">
-          <div class="text-date">
-            <p class="font-date">
-              <b>{{ article.dateevent }}</b>
-            </p>
-          </div>
-          <div class="card-body">
-            <p class="btnsUser">
-              <button type="button" class="btn btn-danger" @click="deleteArticle(article.id)">
-                Borrar
-              </button>
-
-              <button type="button" class="btn btn-warning" @click="update(article.id, articlesList)">
-                Modificar
-              </button>
-            </p>
+  <main class="mt-4">
+    <div class="container d-flex justify-content-center">
+      <div class="row align-items-center">
+        <div class="col-lg-12 mb-2 mx-3" v-for="article in articlesToShow" :key="article.id" :member="article">
+          <div class="card h-100">
+            <img class="img-fluid img-rounded" src="../assets/img/hector.jpg" alt="">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">{{ article.title }}</h5>
+                <p class="card-text">{{ article.content }}</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="card-text"><small class="text-muted">{{ article.dateevent }}</small></p>
+                <div>
+                  <button type="button" class="btn btn-danger" @click="deleteArticle(article.id)">Borrar</button>
+                  <button type="button" class="btn btn-warning ms-1" @click="update(article.id, articlesList)">Modificar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
-    <Pagination :pageSize="articlesCardPerPage" :start="start" :end="end" :maxLength="articlesList.length" @change="page"
-      @prev="prev" @next="next" />
+    <Pagination :pageSize="articlesCardPerPage" :start="start" :end="end" :maxLength="articlesList.length" @change="page" @prev="prev" @next="next" />
   </main>
-  <footerComponent />
 </template>
+
 <style lang="scss" scoped>
-@import ".././assets/sass/variables";
-@import ".././assets/sass/global";
+  @import ".././assets/sass/variables";
+  @import ".././assets/sass/global";
+  main{
+    width: 90%;
+  max-width: none;
+  margin: 0, auto;
 
-.row {
-  width: 90%;
-  margin: auto;
-  margin-top: 5vw;
-}
-
-.card {
   display: flex;
-  padding: 0.7rem;
-  background: linear-gradient(135deg, #6caddf 0%, #de4759 100%);
-
-  gap: 1rem;
-  align-items: center;
-}
-
-.card img {
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.card-body {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 1rem;
-}
-
-.card-body button {
-  margin: 0.3em;
-  width: 5.4em;
-}
-
-.col-md-1 {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-@media (max-width: 767px) {
-  .card img {
-    width: 100px;
-    height: 100px;
+  align-items: center;
+  }
+  .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    background-color: #feffd7;
   }
 
-  .card-body {
-    display: flex;
+  .card-img-top {
+    object-fit: cover;
+    height: 180px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 10rem;
     justify-content: center;
     align-items: center;
-    margin-top: 0.7rem;
-    flex-direction: column;
   }
 
-  .card-body button {
-    width: 80%;
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
   }
 
-  .card .card-text {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    text-align: center;
+  .card-text {
+    margin: 0%;
   }
 
-  .card .card-text b {
-    font-size: 1rem;
-  }
 
-  .row {
-    margin-top: 3rem;
-  }
+.btn-danger,
+.btn-warning {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
 }
-
 </style>
