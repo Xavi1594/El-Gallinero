@@ -38,9 +38,9 @@ const page = (position) => {
 </script>
 
 <template>
-  <main>
+  <navbarComponent />
+  <main >
     <div class="mt-5">
-      <navbarComponent />
       <div class="container" id="headerH3">
         <h3 class="text-center mt-5 mb-3">Últimos artículos</h3>
       </div>
@@ -54,26 +54,17 @@ const page = (position) => {
 </template>
 
 <style lang="scss" scoped>
-/* mt-5 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-#container-Articles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 90%;
-}
-#headerH3 {
-  width: 90%;
-}
+@import ".././assets/sass/variables";
 h3 {
-  font-weight: bold;
-  margin: 0.5em;
+  color:$text-copyright;
+  font-size: 2rem;
 }
-#color-pag  {
-  color: black;
-} */
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/5;
+      object-fit: cover;
+      transition: all 0.4s;
+    }
+ 
 </style>

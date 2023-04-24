@@ -3,12 +3,12 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-light mt-0">
     <div class="container">
       <a href="/" class="navbar-brand"><img src="../assets/img/gallinero_logo-removebg-preview.png" alt="logo gallina" class="logo" style="width: 200px; height: 200px;"></a>
       <i class="bi bi-wechat"></i>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler navbar-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -16,7 +16,7 @@ import { RouterLink } from "vue-router";
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon "></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -59,9 +59,9 @@ import { RouterLink } from "vue-router";
   </nav>
 </template>
 <style lang="scss" scoped>
-@import url(.././assets/sass/_variables.scss);
+@import "../assets/sass/variables";
 nav {
-  height: 80px;
+
   .container {
     img.logo {
       min-width: 100px;
@@ -79,5 +79,11 @@ nav {
   a:hover {
     letter-spacing: 1px;
   }
+  
 }
+.navbar-toggler-icon {
+  color: white;
+  background-color: white;
+}
+
 </style>
