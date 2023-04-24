@@ -91,7 +91,7 @@ async function save() {
   color: $text-copyright;
  }
  form {
-   background-image: url(".././assets/img/pxfuel.jpg");
+   background-color: $background;
    color: #fff; 
  }
 

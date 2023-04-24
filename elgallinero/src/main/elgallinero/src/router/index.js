@@ -43,6 +43,13 @@ const router = createRouter({
 
     },
     {
+      path: '/articuloindividual/:id',
+      name: 'articuloindividual',
+      props: true,
+      component: () => import("../views/ArticuloIndividualView.vue"),
+
+    },
+    {
       path: '/creararticulos',
       name: 'creararticulos',
       props: true,

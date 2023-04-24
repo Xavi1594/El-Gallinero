@@ -31,9 +31,8 @@ const props = defineProps({
 @import "../.././src/assets/sass/variables";
 @import "../.././src/assets/sass/global.scss";
 
-
-h3 {
-  color:$text-copyright;
-  font-size: 2rem;
+* {
+// background-image: url(../../../elgallinero/src/assets/img/pxfuel.jpg)
 }
+
 </style>

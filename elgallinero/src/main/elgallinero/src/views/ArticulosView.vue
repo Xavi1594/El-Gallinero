@@ -55,6 +55,9 @@ const page = (position) => {
 
 <style lang="scss" scoped>
 @import ".././assets/sass/variables";
+
+
+
 h3 {
   color:$text-copyright;
   font-size: 2rem;
