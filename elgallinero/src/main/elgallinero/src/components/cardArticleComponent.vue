@@ -1,5 +1,8 @@
 <script setup>
 import { defineProps } from 'vue';
+import router from '../router';
+import { RouterLink } from 'vue-router';
+
 
 const props = defineProps({
   item: { type: Object },
@@ -22,6 +25,9 @@ const props = defineProps({
             <span>{{ item.dateevent }}</span>
             <h5 class="card-title">{{ item && item.title }}</h5>
             <pre class="card-text">{{ item && item.content }}</pre>
+            <router-link :to="{ name: 'articuloindividual', params: { id: item.id } }">
+        <button>Leer más</button>
+      </router-link>
           </div>
         </div>
       </div>
