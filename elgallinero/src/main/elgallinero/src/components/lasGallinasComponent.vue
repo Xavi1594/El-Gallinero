@@ -49,15 +49,7 @@
                 </div>
             </div>
             
-            <div class="col">
-                <div class="card h-100">
-                    <img src="../assets/img/pablo.jpg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <span class="h4 ">Mr Kumani</span>
-                        <p class="card-text">Koeman, perlas, fútbol pirata, in that order</p>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </template>

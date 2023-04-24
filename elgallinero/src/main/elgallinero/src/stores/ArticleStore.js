@@ -14,10 +14,16 @@ export const ArticleStore = defineStore('ArticleStore', () => {
       articles.value[index] = updatedArticle;
     }
   };
+  
+  const getArticleById = (id) => {
+    return articles.value.find(article => article.id === id);
+  }
 
   return {
     articles,
     addArticle,
     updateArticle,
+    getArticleById,
   };
 });
+  

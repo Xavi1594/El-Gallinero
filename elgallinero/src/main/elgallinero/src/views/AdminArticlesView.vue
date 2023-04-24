@@ -13,7 +13,7 @@ const api = repository.chooseApi();
 
 async function update(id, articles) {
   articlesItem.articlesObject = articles;
-  await router.push({ name: 'editarArticulos', params: { id: id } });
+  await router.push({ name: 'adminarticules', params: { id: id } });
 }
 
 async function deleteArticle(id) {

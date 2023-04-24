@@ -89,6 +89,8 @@ async function save() {
  @import ".././assets/sass/variables";
  .container  { 
   height: 90VH;
+  
+
 
  }
  h2 {
@@ -98,7 +100,9 @@ async function save() {
  form {
    color: #181733; 
  }
-
+label{
+  color: $text-copyright;
+}
  input,
  textarea,
  select {

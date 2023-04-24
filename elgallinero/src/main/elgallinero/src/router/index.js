@@ -16,8 +16,8 @@ const router = createRouter({
 
     },
     {
-      path: '/editararticulos/:id',
-      name: 'editararticulos',
+      path: '/adminarticules/:id',
+      name: 'editararticuls',
       props: true,
       component: () => import("../views/EditarArticulosView.vue"),
     },
@@ -43,10 +43,10 @@ const router = createRouter({
 
     },
     {
-      path: '/articuloindividual/:id',
+      path: "/articulo/:id",
       name: 'articuloindividual',
-      component: () => import('@/views/ArticuloIndividualView.vue'),
       props: true,
+      component: () => import ("../views/ArticuloIndividualView.vue"),
     },
     {
       path: '/creararticulos',

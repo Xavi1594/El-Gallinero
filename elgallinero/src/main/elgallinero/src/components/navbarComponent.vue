@@ -24,11 +24,11 @@ import { RouterLink } from "vue-router";
             <RouterLink class="nav-link" to="adminarticles">Admin articulos</RouterLink>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <RouterLink to="/elpodcast" class="nav-link"
               >El Podcast</RouterLink
             >
-          </li>
+          </li> -->
           <li class="nav-item">
             <RouterLink to="/creararticulos" class="nav-link"
               >Crear artículo</RouterLink
@@ -44,14 +44,14 @@ import { RouterLink } from "vue-router";
               >Artículos</RouterLink
             >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <RouterLink class="nav-link" to="/editararticulos">Editar artículos</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/login"
               >Login</RouterLink
             >
-          </li>
+          </li> -->
         
         </ul>
       </div>
@@ -77,6 +77,8 @@ nav {
   }
   a.router-link-exact-active,
   a:hover {
+    letter-spacing: 1px;
+    color: $text-copyright;
     letter-spacing: 1px;
   }
   
