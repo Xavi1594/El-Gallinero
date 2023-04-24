@@ -7,9 +7,9 @@ let articlesAdd = {
     title: '',
     content: '',
     dateevent: '',
-    image:
-        'https://www.fcbarcelona.com/photo-resources/2020/04/27/57da04df-c7d0-428f-b95c-79f1d2b56941/5.jpg?width=1200&height=750',
+    image: 'https://www.fcbarcelona.com/photo-resources/2020/04/27/57da04df-c7d0-428f-b95c-79f1d2b56941/5.jpg?width=1200&height=750',
 };
+
 
 async function save() {
     if (articlesAdd.title === '') {
@@ -26,6 +26,8 @@ async function save() {
         alert('Tu artículo no tiene contenido');
         return;
     }
+
+
 
     const payload = JSON.stringify(articlesAdd);
     const url = 'http://localhost:8080/api/articles';
@@ -50,68 +52,55 @@ async function save() {
     }
 }
 </script>
-
 <template>
+  
     <form>
-        <div class="container mt-2">
-            <div class="col-12 col-md-8">
-                <h2 class="mt-2">Añadir un artículo</h2>
-                <label for="title" class="form-label">Título</label>
-                <input v-model="articlesAdd.title" type="text" id="input-title" placeholder="Título del artículo">
+      <div class="container mb-1">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="mb-4 text-center">Añadir un artículo</h2>
+            <div class="mb-3">
+              <label for="input-title" class="form-label">Título</label>
+              <input v-model="articlesAdd.title" type="text" id="input-title" class="form-control" placeholder="Título del artículo">
             </div>
-
-            <div class="col-12 col-md-8">
-                <label for="date" class="form-label">Fecha artículo</label>
-                <input v-model="articlesAdd.dateevent" type="date" id="input-date" placeholder="fecha del artículo">
+            <div class="mb-3">
+              <label for="input-date" class="form-label">Fecha artículo</label>
+              <input v-model="articlesAdd.dateevent" type="date" id="input-date" class="form-control" placeholder="fecha del artículo">
             </div>
-
-            <div class="col-12 col-md-8">
-                <label for="content" class="form-label">Contenido</label>
-                <textarea id="textarea-content" v-model="articlesAdd.content" placeholder="Escribe aquí" rows="30" cols="150"></textarea>
+            <div class="mb-3">
+              <label for="textarea-content" class="form-label">Contenido</label>
+              <textarea id="textarea-content" v-model="articlesAdd.content" class="form-control" placeholder="Escribe aquí" rows="10"></textarea>
             </div>
-
-            <div class="d-flex w-80 mb-3 mt-3">
-                <button @click.prevent="save" type="submit" class="btn btn-success me-2 w-50">
-                    Enviar
-                </button>
-                <button type="reset" class="btn btn-danger w-50">Borrar</button>
+            <div class="d-flex justify-content-between">
+              <button @click.prevent="save" type="submit" class="btn btn-primary px-5">
+                Enviar
+              </button>
+              <button type="reset" class="btn btn-warning px-5">
+                Borrar
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </form>
-</template>
-<style lang="scss" scoped>
-@import ".././assets/sass/variables";
 
-.container {
-  width: 80%;
-  max-width: none;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  background-color: $background-component;
-  height: 100%;
-}
+  </template>
+ <style lang="scss" scoped>
+ @import ".././assets/sass/variables";
 
-.form-control {
-  width: 100%;
-  border-radius: 10px;
-}
-
-input, textarea {
-  width: 100%;
-  background-color: #ffffff;
-}
-.btn {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .w-10 {
-    width: 10%;
-  }
-}
+ form {
+   background-image: url(".././assets/img/pxfuel.jpg");
+   color: #fff; 
+ }
 
 
+ input,
+ textarea,
+ select {
+   background-color: #fff; 
+   color: #181733; 
+   border: none;
+   border-radius: 0.25rem;
+   padding: 0.5rem;
+ }
 </style>
