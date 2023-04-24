@@ -4,6 +4,8 @@ import { onBeforeMount, ref, computed, inject } from "vue";
 import GlobalApiRepository from '../assets/ApiRepository/GlobalApiRepository';
 import { ArticleStore } from '../stores/ArticleStore';
 import router from "../router/index";
+import navbarComponent from '../components/navbarComponent.vue';
+import footerComponent from '../components/footerComponent.vue';
 
 const articlesItem = ArticleStore();
 const repository = new GlobalApiRepository("article");
@@ -64,6 +66,7 @@ const page = (position) => {
 </script>
 
 <template>
+  <navbarComponent />
   <main>
     <div class="card mb-3" v-for="article in articlesToShow" :key="article.id" :member="article">
 
@@ -73,6 +76,7 @@ const page = (position) => {
             <b>{{ article.title }}</b>
           </p>
           <p class="font-italic">{{ article.content }}</p>
+         <img src="../assets/img/pedri-removebg-preview.png" alt="">
         </div>
         <div class="gap-3 col-md-9">
           <div class="text-date">
@@ -99,6 +103,7 @@ const page = (position) => {
     <Pagination :pageSize="articlesCardPerPage" :start="start" :end="end" :maxLength="articlesList.length" @change="page"
       @prev="prev" @next="next" />
   </main>
+  <footerComponent />
 </template>
 <style lang="scss" scoped>
 @import ".././assets/sass/variables";
@@ -110,20 +115,33 @@ const page = (position) => {
   margin-top: 5vw;
 }
 
-img {
-  aspect-ratio: 16/9;
-  object-fit: cover;
+.card {
+  display: flex;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #6caddf 0%, #de4759 100%);
+
+  gap: 1rem;
+  align-items: center;
 }
 
-.btn {
-  margin: 0.3em;
-  width: 5.4em;
+.card img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .card-body {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: flex-end;
+  gap: 1rem;
+}
+
+.card-body button {
+  margin: 0.3em;
+  width: 5.4em;
 }
 
 .col-md-1 {
@@ -131,42 +149,37 @@ img {
   justify-content: center;
 }
 
-.gap-3 {
-  display: flex;
-  padding: 0.7rem;
-  background-color: $background;
-}
-
 @media (max-width: 767px) {
-  img {
-    width: 90%;
-    margin-top: 5vw;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
-
-  .btnsUser {
-    display: flex;
-    justify-content: space-around;
-    // width: 100%;
-    // justify-content: center;
-  }
-
-  .font-date {
-    font-size: 1rem;
-  }
-
-  .gap-3 {
-    display: block;
-    width: 90%;
-    margin: auto;
-    margin-top: 1rem;
+  .card img {
+    width: 100px;
+    height: 100px;
   }
 
   .card-body {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 0.7rem;
+    flex-direction: column;
+  }
+
+  .card-body button {
+    width: 80%;
+  }
+
+  .card .card-text {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .card .card-text b {
+    font-size: 1rem;
+  }
+
+  .row {
+    margin-top: 3rem;
   }
 }
+
 </style>

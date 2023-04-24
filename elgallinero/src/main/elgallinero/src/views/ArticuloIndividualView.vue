@@ -1,21 +1,18 @@
-<script setup>
-import navbarComponent from "../components/navbarComponent.vue";
-// const props = defineProps({
-//   option: {
-//     type: String,
-//   },
-//   id: {
-//     type: String,
-//   },
-// });
-
-
-</script>
-
 <template>
-  <navbarComponent />
-  <!-- <HeaderGlobal :option="options[id]" :text="msg[id]"></HeaderGlobal>
-  <SectionMenu :option="options[id]" :id ="id"></SectionMenu>
-  <MenuSectionsGlobal></MenuSectionsGlobal>
-  <FooterGlobal></FooterGlobal> -->
+  <div>
+    <individualCartArticle :item="item" />
+  </div>
 </template>
+
+<script setup>
+import { defineProps } from 'vue';
+import individualCartArticle from '../components/individualCartArticle.vue';
+
+const props = defineProps({
+  item: { type: Object },
+});
+
+const components = {
+  individualCartArticle,
+};
+</script>

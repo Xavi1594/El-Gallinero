@@ -77,7 +77,7 @@
 @import "../assets/sass/variables";
 
 .footer {
-    background: linear-gradient(90deg,#8c1a17,#cd122d);
+  background-color: $background;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;

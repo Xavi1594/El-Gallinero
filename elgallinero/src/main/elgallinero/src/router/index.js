@@ -45,9 +45,8 @@ const router = createRouter({
     {
       path: '/articuloindividual/:id',
       name: 'articuloindividual',
+      component: () => import('@/views/ArticuloIndividualView.vue'),
       props: true,
-      component: () => import("../views/ArticuloIndividualView.vue"),
-
     },
     {
       path: '/creararticulos',
