@@ -55,10 +55,10 @@ async function save() {
 <template>
   
     <form>
-      <div class="container mb-1">
+      <div class="container mb-1 mt-5">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <h2 class="mb-4 mt-2 text-center">Añadir un artículo</h2>
+            <h2 class="mb-4 text-center">Añadir un artículo</h2>
             <div class="mb-3">
               <label for="input-title" class="form-label">Título</label>
               <input v-model="articlesAdd.title" type="text" id="input-title" class="form-control" placeholder="Título del artículo">
@@ -72,10 +72,10 @@ async function save() {
               <textarea id="textarea-content" v-model="articlesAdd.content" class="form-control" placeholder="Escribe aquí" rows="10"></textarea>
             </div>
             <div class="d-flex justify-content-between">
-              <button @click.prevent="save" type="submit" class="btn btn-primary px-5">
+              <button @click.prevent="save" type="submit" class="btn btn-success px-5">
                 Enviar
               </button>
-              <button type="reset" class="btn btn-warning px-5">
+              <button type="reset" class="btn btn-danger px-5">
                 Borrar
               </button>
             </div>
@@ -87,14 +87,17 @@ async function save() {
   </template>
  <style lang="scss" scoped>
  @import ".././assets/sass/variables";
- h2{
-  color: $text-copyright;
- }
- form {
-   background-color: $background;
-   color: #fff; 
- }
+ .container  { 
+  height: 90VH;
 
+ }
+ h2 {
+   color:$text-copyright;
+ }
+ 
+ form {
+   color: #181733; 
+ }
 
  input,
  textarea,
@@ -105,4 +108,20 @@ async function save() {
    border-radius: 0.25rem;
    padding: 0.5rem;
  }
+ @media screen and (min-width: 768px) {
+  input,
+  textarea,
+  select {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    width: 80%;
+  }
+}
+
 </style>
